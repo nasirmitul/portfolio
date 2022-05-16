@@ -412,6 +412,13 @@ nav .action .hamburger:hover .three {
     padding-bottom: 100px;
 }
 
+.my-works h1{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--white);
+}
+
+
 
 
 
@@ -441,7 +448,6 @@ nav .action .hamburger:hover .three {
     opacity: .8;
     transition: .5s;
 }
-
 
 .i-know .topic-name span:hover{
     opacity: 1;
