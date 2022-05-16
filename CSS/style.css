@@ -13,6 +13,11 @@
     --text-black-light: #777777;
     --button-bg: #F9F9F9;
     --bg-secondary: #2D2D2D;
+    --ex-color-one: #D1F2EB;
+    --ex-color-two: #EBDEF0;
+    --ex-color-three: #D6EAF8;
+    --ex-color-four: #FAE5D3;
+    --ex-color-five: #FCF3CF;
 }
 
 ul,
@@ -172,58 +177,6 @@ nav .action .hamburger:hover .three{
     line-height: 32px;
 }
 
-.hero-content .left-content .action-button {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 25px;
-    background: var(--button-bg);
-    color: var(--text-black);
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 500;
-    width: fit-content;
-    
-}
-
-.hero-content .left-content .action-button p{
-    transition: .3s;
-}
-
-.hero-content .left-content .action-button:hover p{
-    transform: translateX(4px);
-}
-
-.hero-content .left-content .action-button .button-arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .3s;
-}
-
-.hero-content .left-content .action-button:hover .button-arrow{
-    transform: translateX(8px);
-}
-
-.hero-content .left-content .action-button .arrow-line {
-    height: 2px;
-    width: 40px;
-    background-color: var(--line-color);
-    transition: .3s;
-}
-
-.hero-content .left-content .action-button:hover .arrow-line {
-    width: 60px;
-}
-
-.hero-content .left-content .action-button .arrow-angle {
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-left: 10px solid var(--line-color);
-    border-bottom: 5px solid transparent;
-}
-
 .hero-content .left-content .social {
     display: flex;
     align-items: center;
@@ -292,4 +245,71 @@ nav .action .hamburger:hover .three{
     font-size: 1rem;
     color: var(--white);
     font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Button CSS ------------ */
+
+.action-button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 25px;
+    background: var(--button-bg);
+    color: var(--text-black);
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: fit-content;
+}
+
+.action-button p{
+    transition: .3s;
+}
+
+.action-button:hover p{
+    transform: translateX(4px);
+}
+
+.action-button .button-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.action-button:hover .button-arrow{
+    transform: translateX(8px);
+}
+
+.action-button .arrow-line {
+    height: 2px;
+    width: 40px;
+    background-color: var(--line-color);
+    transition: .3s;
+}
+
+.action-button:hover .arrow-line {
+    width: 60px;
+}
+
+.action-button .arrow-angle {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 10px solid var(--line-color);
+    border-bottom: 5px solid transparent;
 }
