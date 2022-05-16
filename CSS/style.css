@@ -145,7 +145,7 @@ nav .action .hamburger .three {
 }
 
 nav .action .hamburger:hover .two,
-nav .action .hamburger:hover .three{
+nav .action .hamburger:hover .three {
     transition: .6s;
     position: relative;
     transform: translateX(100%);
@@ -183,23 +183,25 @@ nav .action .hamburger:hover .three{
     gap: 40px;
 }
 
-.hero-content .left-content .social p{
+.hero-content .left-content .social p {
     color: var(--white);
     font-size: 1.1rem;
     font-weight: 400;
 }
 
-.hero-content .left-content .social .social-icons ul{
+.hero-content .left-content .social .social-icons ul {
     display: flex;
     align-items: center;
     gap: 30px;
 }
-.hero-content .left-content .social .social-icons ul li{
+
+.hero-content .left-content .social .social-icons ul li {
     background: var(--bg-secondary);
     border-radius: 50%;
     transition: .5s;
 }
-.hero-content .left-content .social .social-icons ul li a{
+
+.hero-content .left-content .social .social-icons ul li a {
     color: var(--white);
     font-size: 1.1rem;
     height: 45px;
@@ -211,42 +213,181 @@ nav .action .hamburger:hover .three{
     opacity: .7;
 }
 
-.hero-content .left-content .social .social-icons ul li a:hover{
+.hero-content .left-content .social .social-icons ul li a:hover {
     opacity: 1;
     transition: .5s;
 }
 
-.hero-content .left-content .social .social-icons ul li:hover{
+.hero-content .left-content .social .social-icons ul li:hover {
     border-radius: 0;
 }
 
-.hero-content .right-content{
+.hero-content .right-content {
     display: flex;
     flex-direction: column;
     gap: 60px;
 }
 
-.hero-content .right-content .number{
+.hero-content .right-content .number {
     opacity: .7;
     cursor: pointer;
     transition: .5s;
 }
 
-.hero-content .right-content .number:hover{
+.hero-content .right-content .number:hover {
     opacity: 1;
 }
 
-.hero-content .right-content .number h3{
+.hero-content .right-content .number h3 {
     font-size: 3rem;
     color: var(--white);
 }
 
-.hero-content .right-content .number p{
+.hero-content .right-content .number p {
     font-size: 1rem;
     color: var(--white);
     font-weight: 400;
 }
 
+.about-me {
+    background: var(--bg);
+}
+
+.about-me .about-me-main{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-me-main .about-left .bg-box {
+    height: 210px;
+    width: 210px;
+    border: 10px solid var(--button-bg);
+    position: relative;
+    left: 115px;
+    top: 150px;
+    opacity: .25;
+}
+
+.about-me-main .about-left .main-box {
+    display: flex;
+    gap: 12px;
+}
+
+.about-me-main .about-left .main-box .left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+    position: relative;
+    bottom: 150px;
+}
+
+.about-me-main .about-left .main-box .right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    bottom: 170px;
+}
+
+.about-me-main .about-left .main-box .box-one {
+    height: 166px;
+    width: 211px;
+    background-color: var(--ex-color-one);
+}
+
+.about-me-main .about-left .main-box .box-two {
+    height: 235px;
+    width: 173px;
+    background-color: var(--ex-color-four);
+}
+
+.about-me-main .about-left .main-box .box-three {
+    height: 228px;
+    width: 173px;
+    background-color: var(--ex-color-two);
+}
+
+.about-me-main .about-left .main-box .box-four {
+    height: 209px;
+    width: 261px;
+    background-color: var(--ex-color-three);
+}
+
+.about-me-main .about-left .main-box .box-one,
+.about-me-main .about-left .main-box .box-two,
+.about-me-main .about-left .main-box .box-three,
+.about-me-main .about-left .main-box .box-four{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-me-main .about-left .main-box .box-one i,
+.about-me-main .about-left .main-box .box-two i,
+.about-me-main .about-left .main-box .box-three i,
+.about-me-main .about-left .main-box .box-four i{
+    font-size: 2rem;
+    color: var(--white);
+    padding-bottom: 3px;
+}
+
+.about-me-main .about-left .main-box .box-one p,
+.about-me-main .about-left .main-box .box-two p,
+.about-me-main .about-left .main-box .box-three p,
+.about-me-main .about-left .main-box .box-four p{
+    font-size: 1.3rem;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--text-black);
+    padding-top: 3px;
+    opacity: .9;
+}
+
+.about-me-main .about-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+    gap: 50px;
+    
+}
+
+.about-me-main .about-right .title h2{
+    font-size: 3rem;
+    line-height: 55px;
+    color: var(--white);
+}
+
+.about-me-main .about-right .description p{
+    font-size: 1.2rem;
+    color:var(--text-black-light);
+    max-width: 600px;
+}
+
+.about-me-main .about-right .actions{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-me-main .about-right .actions .download a{
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.about-me-main .about-right .actions .download a::after{
+    content: '';
+    position:relative;
+    display: flex;
+    height: 1px;
+    width: 100%;
+    background-color: var(--white);
+    margin-top: 6px;
+}
 
 
 
@@ -258,6 +399,30 @@ nav .action .hamburger:hover .three{
 
 
 
+
+
+
+
+/* ---------- Section Heading CSS ------------ */
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.heading .heading-line {
+    height: 2px;
+    width: 65px;
+    background-color: var(--white);
+}
+
+.heading p {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
 
 
 
@@ -276,11 +441,11 @@ nav .action .hamburger:hover .three{
     width: fit-content;
 }
 
-.action-button p{
+.action-button p {
     transition: .3s;
 }
 
-.action-button:hover p{
+.action-button:hover p {
     transform: translateX(4px);
 }
 
@@ -291,7 +456,7 @@ nav .action .hamburger:hover .three{
     transition: .3s;
 }
 
-.action-button:hover .button-arrow{
+.action-button:hover .button-arrow {
     transform: translateX(8px);
 }
 
