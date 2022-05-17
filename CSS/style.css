@@ -842,6 +842,118 @@ nav .action .hamburger:hover .three {
 
 
 
+
+
+/* ---------- Contact Section ------------ */
+footer {
+    background: var(--bg);
+    padding-bottom: 100px;
+}
+
+.main-footer{
+    display: flex;
+    padding: 70px 0;
+}
+
+.main-footer .title h2{
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.main-footer .left{
+    width: 50%;
+}
+
+.main-footer .left input{
+    padding: 20px;
+    background: transparent;
+    outline: none;
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-size: 1rem;
+    width: 250px;
+    border-right: none;
+}
+
+.main-footer .left button{
+    position: relative;
+    right: 10px;
+}
+
+.main-footer .action-button {
+    font-size: 1rem;
+    font-weight: 500;
+    width: fit-content;
+    padding: 20px 25px;
+    
+}
+
+.main-footer .action-button .arrow-line {
+    width: 30px;
+}
+
+.main-footer .action-button:hover .arrow-line {
+    width: 35px;
+}
+
+.main-footer .action-button .arrow-angle {
+    border-top: 4px solid transparent;
+    border-left: 8px solid var(--line-color);
+    border-bottom: 4px solid transparent;
+}
+
+.main-footer .right .links ul{
+    display: flex;
+    gap: 30px;
+}
+
+.main-footer .right .links ul a{
+    color: var(--white);
+    opacity: .7;
+    font-size: 1rem;
+    transition: .5s;
+}
+
+.main-footer .right .links ul a:hover{
+    opacity: 1;
+}
+
+footer::before,
+footer::after{
+    content: '';
+    position: relative;
+    display: flex;
+    height: 1px;
+    width: min(1250px, 95%);
+    margin: auto;
+    background-color: var(--line-color);
+}
+
+
+
+
+
+
+/* ---------- Copyright CSS ------------ */
+
+.copyright p{
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 300;
+    color: var(--white);
+    background: var(--bg);
+    padding:  0 0 60px 0;
+    margin-top: -40px;
+}
+
+
+
+
+
+
+
 /* ---------- Section Heading CSS ------------ */
 
 .heading {
