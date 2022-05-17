@@ -265,7 +265,7 @@ nav .action .hamburger:hover .three {
     background: var(--bg);
 }
 
-.about-me .about-me-main{
+.about-me .about-me-main {
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -330,7 +330,7 @@ nav .action .hamburger:hover .three {
 .about-me-main .about-left .main-box .box-one,
 .about-me-main .about-left .main-box .box-two,
 .about-me-main .about-left .main-box .box-three,
-.about-me-main .about-left .main-box .box-four{
+.about-me-main .about-left .main-box .box-four {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -341,7 +341,7 @@ nav .action .hamburger:hover .three {
 .about-me-main .about-left .main-box .box-one i,
 .about-me-main .about-left .main-box .box-two i,
 .about-me-main .about-left .main-box .box-three i,
-.about-me-main .about-left .main-box .box-four i{
+.about-me-main .about-left .main-box .box-four i {
     font-size: 2rem;
     color: var(--white);
     padding-bottom: 3px;
@@ -350,7 +350,7 @@ nav .action .hamburger:hover .three {
 .about-me-main .about-left .main-box .box-one p,
 .about-me-main .about-left .main-box .box-two p,
 .about-me-main .about-left .main-box .box-three p,
-.about-me-main .about-left .main-box .box-four p{
+.about-me-main .about-left .main-box .box-four p {
     font-size: 1.3rem;
     line-height: 20px;
     font-weight: 500;
@@ -359,41 +359,41 @@ nav .action .hamburger:hover .three {
     opacity: .9;
 }
 
-.about-me-main .about-right{
+.about-me-main .about-right {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     text-align: end;
     gap: 50px;
-    
+
 }
 
-.about-me-main .about-right .title h2{
+.about-me-main .about-right .title h2 {
     font-size: 3rem;
     line-height: 55px;
     color: var(--white);
 }
 
-.about-me-main .about-right .description p{
+.about-me-main .about-right .description p {
     font-size: 1.2rem;
-    color:var(--text-black-light);
+    color: var(--text-black-light);
     max-width: 600px;
 }
 
-.about-me-main .about-right .actions{
+.about-me-main .about-right .actions {
     display: flex;
     gap: 30px;
     align-items: center;
 }
 
-.about-me-main .about-right .actions .download a{
+.about-me-main .about-right .actions .download a {
     color: var(--white);
     font-size: 1.2rem;
 }
 
-.about-me-main .about-right .actions .download a::after{
+.about-me-main .about-right .actions .download a::after {
     content: '';
-    position:relative;
+    position: relative;
     display: flex;
     height: 1px;
     width: 100%;
@@ -412,7 +412,7 @@ nav .action .hamburger:hover .three {
     padding-bottom: 100px;
 }
 
-.my-works h1{
+.my-works h1 {
     font-size: 4rem;
     text-align: center;
     color: var(--white);
@@ -432,7 +432,7 @@ nav .action .hamburger:hover .three {
     padding-bottom: 100px;
 }
 
-.i-know .topic-name p{
+.i-know .topic-name p {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
@@ -440,7 +440,7 @@ nav .action .hamburger:hover .three {
     line-height: 90px;
 }
 
-.i-know .topic-name span{
+.i-know .topic-name span {
     padding: 15px 45px;
     border: 2px solid var(--white);
     margin: 0 12px;
@@ -449,7 +449,7 @@ nav .action .hamburger:hover .three {
     transition: .5s;
 }
 
-.i-know .topic-name span:hover{
+.i-know .topic-name span:hover {
     opacity: 1;
 }
 
@@ -464,15 +464,16 @@ nav .action .hamburger:hover .three {
     padding-bottom: 100px;
 }
 
-.strategy-flow h2{
+.strategy-flow h2 {
     font-size: 3rem;
     color: var(--white);
     font-weight: 500;
     margin-bottom: 30px;
 }
 
-.strategy-flow .process{
+.strategy-flow .process {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -480,32 +481,36 @@ nav .action .hamburger:hover .three {
 .strategy-flow .process .one,
 .strategy-flow .process .two,
 .strategy-flow .process .three,
-.strategy-flow .process .four{
+.strategy-flow .process .four {
     max-width: 295px;
     padding: 20px;
 }
 
-.strategy-flow .process .one{
+.strategy-flow .process .one {
     border: 1px solid var(--ex-color-one);
 }
-.strategy-flow .process .two{
+
+.strategy-flow .process .two {
     border: 1px solid var(--ex-color-two);
 }
-.strategy-flow .process .three{
+
+.strategy-flow .process .three {
     border: 1px solid var(--ex-color-three);
 }
-.strategy-flow .process .four{
+
+.strategy-flow .process .four {
     border: 1px solid var(--ex-color-four);
 }
 
 .strategy-flow .process .one .number,
 .strategy-flow .process .two .number,
 .strategy-flow .process .three .number,
-.strategy-flow .process .four .number{
+.strategy-flow .process .four .number {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-black);
-    height: 40px;width: 40px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     background-color: var(--button-bg);
     display: flex;
@@ -514,14 +519,14 @@ nav .action .hamburger:hover .three {
     margin-bottom: 10px;
 }
 
-.strategy-flow h6{
+.strategy-flow h6 {
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--white);
     margin-bottom: 10px;
 }
 
-.strategy-flow .des{
+.strategy-flow .des {
     font-size: .85rem;
     color: var(--text-black-light);
     line-height: 17px;
@@ -540,9 +545,298 @@ nav .action .hamburger:hover .three {
     padding-bottom: 100px;
 }
 
+.service .services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service .services .service-box {
+    border: 1px solid var(--white);
+    padding: 20px;
+    min-width: 320px;
+    width: calc((100% / 3) - 14px);
+}
+
+.service .services .service-box i {
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.service .services .service-box .title {
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: 500;
+    line-height: 35px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.service .services .service-box .info {
+    font-size: 1rem;
+    color: var(--button-bg);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+.service .services .service-box .info::before {
+    content: '';
+    position: relative;
+    display: flex;
+    height: 1px;
+    width: 20px;
+    background: var(--white);
+    margin-right: 10px;
+}
+
+.service .services .service-box .info:last-of-type {
+    padding-bottom: 30px;
+}
+
+.service .services .service-box .action-button {
+    width: 100%;
+    justify-content: center;
+}
 
 
 
+
+
+
+
+/* ---------- Testimonial Section ------------ */
+.testimonial {
+    background: var(--bg);
+    padding-bottom: 100px;
+}
+
+.testimonial .testimonial-heading h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+.main-review .carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.main-review .carousel .review {
+    width: min(800px, 90%);
+    display: none;
+}
+
+.main-review .carousel .review-before {
+    display: flex;
+}
+
+.main-review .carousel .review-before::before {
+    content: '';
+    position: relative;
+    display: flex;
+    min-height: 100% !important;
+    width: 1px;
+    background: var(--button-bg);
+    margin-right: 40px;
+}
+
+.main-review .carousel .review-head {
+    display: flex;
+}
+
+.main-review .carousel .review-img img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.main-review .carousel .head-detail .name h4 {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.main-review .carousel .head-detail .position p {
+    color: var(--white);
+    font-size: .9rem;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    opacity: .7;
+}
+
+.main-review .carousel .head-detail .position p::before {
+    content: '';
+    position: relative;
+    display: flex;
+    height: 2px;
+    width: 30px;
+    background: var(--button-bg);
+    margin-right: 15px;
+}
+
+.main-review .carousel .review-quote {
+    color: var(--white);
+    font-size: .9rem;
+    margin-top: 15px;
+}
+
+.main-review .carousel .change-review {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+
+.main-review .carousel .change-review .prev,
+.main-review .carousel .change-review .next {
+    height: 55px;
+    width: 55px;
+    background-color: var(--bg-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.main-review .carousel .change-review i {
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.main-review .carousel .active {
+    display: block;
+}
+
+
+
+
+
+
+
+/* ---------- New Projcet Section ------------ */
+.new-project {
+    background: var(--bg);
+    padding-bottom: 100px;
+}
+
+.new-project .title {
+    font-size: 4rem;
+    color: var(--white);
+    line-height: 70px;
+    margin-bottom: 40px;
+}
+
+.new-project .start-project-email{
+    width: fit-content;
+    display: block;
+}
+
+
+
+
+
+
+
+/* ---------- Contact Section ------------ */
+.contact {
+    background: var(--bg);
+    padding-bottom: 100px;
+}
+
+.contact .title h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: min(700px, 95%);
+    gap: 30px
+}
+
+.contact-form form input {
+    padding: 10px 0;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--line-color);
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.contact-form form input::placeholder {
+    color: var(--white);
+    opacity: .4;
+    transition: .3s;
+}
+
+.contact-form form input:focus::placeholder {
+    opacity: .8;
+}
+
+.contact-form .needs {
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.contact-form .select {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -20px;
+}
+
+.contact-form .select label {
+    margin-right: 15px;
+}
+
+.contact-form .select label input {
+    opacity: 0;
+    z-index: -1;
+}
+
+.contact-form .select label input:checked+p {
+    background: var(--white);
+    color: var(--text-black);
+    font-weight: 400;
+    opacity: 1;
+}
+
+.contact-form .select label p {
+    border: 1px solid var(--white);
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: var(--white);
+    font-weight: 400;
+    display: block;
+    transition: .5s;
+    width: fit-content;
+    margin-top: -7px;
+    opacity: .7;
+}
+
+.contact-form .select label p:hover {
+    opacity: 1;
+}
+
+.contact-form form button{
+    width: fit-content;
+}
 
 
 
