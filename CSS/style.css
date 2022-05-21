@@ -8,7 +8,8 @@
 }
 
 :root {
-    --bg: #1E1E1E;
+    /* --bg: #1E1E1E; */
+    --bg: #131313;
     --white: #fff;
     --line-color: #444444;
     --text-black: #4C4C4C;
@@ -44,68 +45,76 @@ html {
 
 
 
-/* ---------- Hero Section ------------ */
 
-.hero {
-    background: var(--bg);
-    height: 100vh;
-    width: 100%;
-}
-
-.hero .nav-bar {
+/* ======================= Navigation ======================= */
+.nav-bar {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 200px;
 }
 
-.hero nav {
+.nav-bar nav {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: min(1512px, 95%);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 100%;
+    height: 150px;
+    /* background-color: var(--bg); */
+    width: min(1512px, 96%);
     margin: auto;
-    padding-top: 40px;
-    padding-bottom: 25px;
-    position: relative;
 }
 
-.hero .nav-underline {
-    height: 1px;
-    width: min(1620px, 98%);
-    background: var(--line-color);
-}
-
-nav .logo a img {
+.nav-bar nav .logo img {
     max-width: 100px;
     min-width: 80px;
 }
 
-nav .menus ul {
+.nav-bar nav .menus ul {
     display: flex;
     justify-content: center;
-    align-items: center;
+
     gap: 45px;
 }
 
-nav .menus ul li a {
+.nav-bar nav .menus ul li {
+    display: block;
+}
+
+.nav-bar nav .menus ul li a {
     text-transform: uppercase;
     font-size: .85rem;
     color: var(--white);
     padding-bottom: 7px;
+    display: block;
+    position: relative;
+    top: 15px;
 }
 
-nav .menus ul li a.active::after {
+.nav-bar nav .menus ul li a:after {
     content: '';
     position: relative;
-    display: flex;
-    width: 50%;
-    height: 2px;
-    background-color: var(--button-bg);
-    margin-top: 2px;
-    left: 100%;
-    transform: translateX(-150%);
+    top: -10px;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+}
+
+.nav-bar nav .menus ul li a:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 nav .action {
@@ -124,38 +133,257 @@ nav .action .contact-action a {
     background-color: var(--button-bg);
 }
 
+
+
+
+
+
+nav .action .active-hamburger {
+    z-index: 3;
+}
+
 nav .action .hamburger {
     display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    transition: .5s;
 }
 
 nav .action .hamburger .one {
     height: 2px;
     width: 30px;
     background: var(--white);
+    transition: .5s;
 }
 
 nav .action .hamburger .two {
     height: 2px;
     width: 22px;
     background: var(--white);
-    transition: .6s;
+    transition: .5s;
 }
 
 nav .action .hamburger .three {
     height: 2px;
     width: 15px;
     background: var(--white);
-    transition: .6s;
+    transition: .5s;
 }
 
 nav .action .hamburger:hover .two,
 nav .action .hamburger:hover .three {
-    transition: .6s;
+    transition: .5s;
     position: relative;
     transform: translateX(100%);
+}
+
+
+
+
+
+.overlay {
+    height: 100vh;
+    width: 0%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: var(--bg);
+    overflow: hidden;
+    transition: 1s;
+    display: block;
+}
+
+.overlay .overlay-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1800px, 95%);
+    margin: auto;
+    padding-top: 50px;
+}
+
+.overlay .overlay-nav .logo img{
+    max-width: 100px;
+    min-width: 80px;
+    cursor: pointer;
+}
+
+.overlay .overlay-nav .cross{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: .5s linear;
+    height: 45px;
+    width: 45px;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay .overlay-nav .cross .one{
+    height: 2px;
+    width: 30px;
+    background: var(--white);
+    transform: rotate(45deg);
+    transition: .4s;
+}
+
+.overlay .overlay-nav .cross .two{
+    height: 2px;
+    width: 30px;
+    background: var(--white);
+    transform: rotate(0deg);
+    position: relative;
+    bottom: 2px;
+    transform: rotate(-45deg);
+    transition: .4s;
+    transition-delay: .2s;
+}
+
+.overlay .overlay-nav .cross:hover .one{
+    transform: rotate(180deg);
+}
+
+.overlay .overlay-nav .cross:hover .two{
+    transform: rotate(180deg);
+    transition-delay: .2s;
+}
+
+.overlay .overlay-content .menu-items {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.overlay .overlay-content .inner {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.overlay .overlay-content .inner .number {
+    width: 25px;
+    color: var(--text-black-light);
+    transition: .5s;
+}
+
+.overlay .overlay-content .inner .line {
+    height: 1px;
+    width: 60px;
+    background: var(--text-black-light);
+    margin-right: 20px;
+    opacity: 1;
+    transition: .5s;
+}
+
+.overlay .overlay-content .inner .menu {
+    width: 100px;
+    margin-left: 10px;
+    transition: .5s;
+}
+
+.overlay .overlay-content .inner .menu:hover{
+    transform: translateX(-6px);
+}
+
+.overlay .overlay-content .inner .menu:hover~.line{
+    transform: translateX(-8px);
+    width: 80px;
+}
+
+.overlay .overlay-content .inner .menu:hover~.number{
+    transform: translateX(-30px);
+}
+
+.overlay .overlay-content .inner .menu a {
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.overlay .overlay-content .socials{
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+}
+
+.overlay .overlay-content .socials ul{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    gap: 6px;
+    transition: .5s;
+}
+
+.overlay .overlay-content .socials ul li a{
+    color: var(--white);
+    opacity: .7;
+    transition: .5s;
+}
+
+.overlay .overlay-content .socials ul li:nth-child(1):hover::before{
+    content: 'facebook';
+    margin-right: 20px;
+    color: var(--white);
+    transition: .5s;
+}
+.overlay .overlay-content .socials ul li:nth-child(2):hover::before{
+    content: 'instagram';
+    margin-right: 20px;
+    color: var(--white);
+    transition: .5s;
+}
+.overlay .overlay-content .socials ul li:nth-child(3):hover::before{
+    content: 'dribble';
+    margin-right: 20px;
+    color: var(--white);
+    transition: .5s;
+}
+.overlay .overlay-content .socials ul li:nth-child(4):hover::before{
+    content: 'linkedin';
+    margin-right: 20px;
+    color: var(--white);
+    transition: .5s;
+}
+.overlay .overlay-content .socials ul li:nth-child(5):hover::before{
+    content: 'twitter';
+    margin-right: 20px;
+    color: var(--white);
+    transition: .5s;
+}
+
+
+
+
+
+.hero .nav-underline {
+    height: 1px;
+    width: min(1620px, 95%);
+    background: var(--line-color);
+    /* z-index: 1; */
+    position: relative;
+    display: flex;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* ---------- Hero Section ------------ */
+
+.hero {
+    background: var(--bg);
+    height: 100vh;
+    width: 100%;
 }
 
 .hero-content {
@@ -407,18 +635,129 @@ nav .action .hamburger:hover .three {
 
 
 /* ---------- My Works Section ------------ */
+.my-works .heading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading-title{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+/* .scroll-arrow{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.scroll-arrow .scroll-left,
+.scroll-arrow .scroll-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+    width: 100px;
+    height: 50px;
+
+}
+
+.scroll-arrow .arrow-line{
+    height: 2px;
+    width: 40px;
+    background-color: var(--white);
+    transition: .3s;
+}
+
+.scroll-arrow .arrow-angle{
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 10px solid var(--white);
+    border-bottom: 5px solid transparent;
+}
+
+.scroll-arrow .scroll-left .arrow-angle {
+    transform: rotate(180deg);
+}
+
+.scroll-arrow  .arrow-line:hover{
+    transform: scaleX(-2);
+}
+ */
+
+
 .my-works {
     background: var(--bg);
     padding-bottom: 100px;
 }
 
-.my-works h1 {
-    font-size: 4rem;
-    text-align: center;
-    color: var(--white);
+.works .work-1 {
+    display: flex;
+    justify-content: center;
+    background: var(--ex-color-one);
+    padding: 25px;
+    gap: 25px;
+    width: 100%;
+    height: 400px;
 }
 
+.works .work-1 .work-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100% - 200px);
+    justify-content: space-between;
+}
 
+.works .work-1 .work-ss {
+    width: 50%;
+    object-fit: cover;
+}
+
+.works .work-1 .work-info .work-heading {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+    margin-bottom: 10px;
+}
+
+.works .work-1 .work-info .title h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.works .work-1 .work-info .description p {
+    font-size: .9rem;
+    line-height: 20px;
+    text-align: justify;
+    color: var(--text-black);
+    margin-bottom: 15px;
+}
+
+.works .work-1 .work-info .technology p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 20px;
+}
+
+.works .work-1 .work-info button {
+    width: fit-content;
+    border: none;
+    outline: none;
+}
+
+.works .work-1 .work-ss img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 
@@ -734,7 +1073,7 @@ nav .action .hamburger:hover .three {
     margin-bottom: 40px;
 }
 
-.new-project .start-project-email{
+.new-project .start-project-email {
     width: fit-content;
     display: block;
 }
@@ -834,7 +1173,7 @@ nav .action .hamburger:hover .three {
     opacity: 1;
 }
 
-.contact-form form button{
+.contact-form form button {
     width: fit-content;
 }
 
@@ -850,23 +1189,23 @@ footer {
     padding-bottom: 100px;
 }
 
-.main-footer{
+.main-footer {
     display: flex;
     padding: 70px 0;
 }
 
-.main-footer .title h2{
+.main-footer .title h2 {
     color: var(--white);
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 10px;
 }
 
-.main-footer .left{
+.main-footer .left {
     width: 50%;
 }
 
-.main-footer .left input{
+.main-footer .left input {
     padding: 20px;
     background: transparent;
     outline: none;
@@ -877,7 +1216,7 @@ footer {
     border-right: none;
 }
 
-.main-footer .left button{
+.main-footer .left button {
     position: relative;
     right: 10px;
 }
@@ -887,7 +1226,7 @@ footer {
     font-weight: 500;
     width: fit-content;
     padding: 20px 25px;
-    
+
 }
 
 .main-footer .action-button .arrow-line {
@@ -904,24 +1243,24 @@ footer {
     border-bottom: 4px solid transparent;
 }
 
-.main-footer .right .links ul{
+.main-footer .right .links ul {
     display: flex;
     gap: 30px;
 }
 
-.main-footer .right .links ul a{
+.main-footer .right .links ul a {
     color: var(--white);
     opacity: .7;
     font-size: 1rem;
     transition: .5s;
 }
 
-.main-footer .right .links ul a:hover{
+.main-footer .right .links ul a:hover {
     opacity: 1;
 }
 
 footer::before,
-footer::after{
+footer::after {
     content: '';
     position: relative;
     display: flex;
@@ -938,13 +1277,13 @@ footer::after{
 
 /* ---------- Copyright CSS ------------ */
 
-.copyright p{
+.copyright p {
     text-align: center;
     font-size: .9rem;
     font-weight: 300;
     color: var(--white);
     background: var(--bg);
-    padding:  0 0 60px 0;
+    padding: 0 0 60px 0;
     margin-top: -40px;
 }
 
